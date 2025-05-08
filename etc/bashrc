@@ -25,18 +25,18 @@ export CFDEM_VERSION=24.01
 # Please set to the appropriate path if the default is not correct.
 #
 # activate compatible OpenFOAM version
-. $HOME/OpenFOAM/OpenFOAM-6/etc/bashrc
+. $HOME/OpenFOAM/OpenFOAM-5.x/etc/bashrc
 #
 # CFDEMcoupling
 export CFDEM_INST_DIR=$HOME/$CFDEM_PROJECT
-export CFDEM_PROJECT_DIR=$CFDEM_INST_DIR/CFDEMcoupling
-export CFDEM_PROJECT_USER_DIR=$CFDEM_INST_DIR/$USER-$WM_PROJECT_VERSION
+export CFDEM_PROJECT_DIR=$CFDEM_INST_DIR/CFDEMcoupling-PFM
+export CFDEM_PROJECT_USER_DIR=$CFDEM_INST_DIR/$USER-PFM-$WM_PROJECT_VERSION
 #
 # LIGGGHTS
-export CFDEM_LIGGGHTS_INST_DIR=$CFDEM_INST_DIR/LIGGGHTS
-#
+export CFDEM_LIGGGHTS_INST_DIR=$HOME/LIGGGHTS/LIGGGHTS-INL
+#export CFDEM_LIGGGHTS_MAKEFILE_NAME=auto
 # LPP installation path
-export CFDEM_LPP_INST_DIR=$CFDEM_INST_DIR/LPP
+export CFDEM_LPP_INST_DIR=$HOME/LIGGGHTS/lpp
 #
 # Path to additional libraries
 export CFDEM_ADD_LIBS_DIR=
@@ -101,7 +101,7 @@ export CFDEM_LIB_DIR=$CFDEM_PROJECT_DIR/platforms/$WM_OPTIONS/lib
 
 #- path to apps
 export CFDEM_APP_DIR=$CFDEM_PROJECT_DIR/platforms/$WM_OPTIONS/bin
-
+export CFDEM_USER_APP_DIR=$CFDEM_PROJECT_USER_DIR/platforms/$WM_OPTIONS/bin
 #- create directories
 mkdir -p $CFDEM_LIB_DIR
 mkdir -p $CFDEM_APP_DIR
